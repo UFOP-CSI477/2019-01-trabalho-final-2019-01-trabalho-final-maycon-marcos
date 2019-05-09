@@ -6,9 +6,7 @@
 <!-- Descrever um resumo sobre o trabalho. -->
 
 ### Resumo
-O objetivo deste documento é apresentar uma proposta para o trabalho a ser desenvolvido na disciplina CSI477 -- Sistemas WEB I. O trabalho consiste na atividade de desenvolver uma aplicação Web, seguindo alguns requisitos previamente estabelecidos pela equipe de desenvolvedores (Marcos e Maycon). Este documento apresenta informações relativas a como essa aplicação será desenvolvida, as métricas que serão utilizadas durante este processo de desenvolvimento, assim como tratará também de descrever brevemente  o tema que será abordado, bem como o escopo, as restrições e demais questões pertinentes ao contexto do mesmo, o trabalho será analisado e avaliado como requisito  parcial para avaliação do semestre letivo 2019/01 para o curso de sistemas de informação da Universidade Federal de Ouro Preto.
-
-
+O objetivo deste documento é apresentar uma proposta para o trabalho a ser desenvolvido na disciplina CSI477 -- Sistemas WEB I. Ele se trata de uma breve descrição sobre o tema que será abordado, bem como o escopo, as restrições e demais questões pertinentes ao contexto do mesmo, o trabalho será analisado e avaliado como requisito  parcial para avaliação do semestre letivo 2019/01 para o curso de sistemas de informação da Universidade Federal de Ouro Preto.
 
 
 <!-- Apresentar o tema. -->
