@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cadastrar</title>
+
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- fonte usada no sistema -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin">
+      <!-- Arquivo CSS externo -->
+    <link rel="stylesheet"  href="estilo.css">
+      <!-- ícone do sistema web -->
+    <link rel="icon"  href="icon.png">
+
+
+
+
+</head>
+<body>
+
+<div class="container">
+	<div class="row" id="conteudo_do_sistema">
+		
+		<form class="col-12">
+			<div>
+			<h2>Cadastre-se no <span class="laranja">Bolt</span>Controle</h2><br>
+			</div>
+	    <div class="row">	
+		  <div class="col-6">	
+		  		<div class="form-group">
+         			<label for="Pnome"><h4>Informe o seu primeiro nome</h4></label>
+          			<input type="text" name="qnt" id="fistName" placeholder="Primeiro Nome" class="form-control sm">
+         		</div>
+
+         		<div class="form-group">
+         			<label for="Unome"><h4>Informe o seu último nome</h4></label>
+          			<input type="text" name="qnt" id="secondName" placeholder="Último Nome" class="form-control sm">
+         		</div>
+
+
+
+         		<div class="form-group">
+				    <label for="Email"><h4>Email</h4></label>
+				    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="informe seu email">
+				    <small id="emailHelp" class="form-text text-muted">Nós nunca vamos compartilhar seu e-mail com mais ninguém.</small>
+				</div>
+
+				<div class="form-group">
+				    <label for="exampleInputPassword1"><h4>Senha</h4></label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Informe sua senha">
+				</div>
+
+			    <div class="form-group form-check">
+				    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				    <label class="form-check-label" for="exampleCheck1">Olhe para mim</label>
+				</div>
+				  
+
+
+		 	</div> <!-- Fim da coluna da esquerda -->
+
+
+		 	<div class="col-6">
+		 	   <h4>Inserir foto de perfil</h4>
+			 	<div class="input-group mb-3">
+					  <div class="custom-file">
+						    <input type="file" class="custom-file-input" id="inputGroupFile02">
+						    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Escolher arquivo</label>
+					  </div>
+
+					  <div class="input-group-append">
+					    <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+					  </div>
+				</div>
+
+
+				  <div class="form-group">
+				    <label for="endereco"><h4>Endereço</h4></label>
+				    <input type="text" class="form-control" id="endereco" placeholder="Ex: rua josé da silva, N° 25, bairro algum">
+				  </div>
+
+				  <div class="form-row">
+						    <div class="form-group col-md-6">
+							      <label for="cidade"><h4>Cidade</h4></label>
+							      <input type="text" class="form-control" id="cidade">
+						    </div>
+
+						    <div class="form-group col-md-4">
+						      <label for="estado"><h4>Estado</h4></label>
+						      <select id="estado" class="form-control">
+						        <option selected>Selecione...</option>
+						        <option>Minas Gerais</option>
+						        <option>São Paulo</option>
+						        <option>Rio de Janeiro</option>
+						        <option>Espirito Santo</option>
+						        <option>Bahia</option>
+						        <option>Rio Grande do Sul</option>
+						        <option>Goias</option>
+						        <option>Amazonas</option>
+						      </select>
+			    			</div>
+	    		  </div>
+
+
+    			
+    				
+
+    			<div class="form-group">
+			      <label for="estado"><h4>Companhia de Energia<h4></label>
+			      <select id="estado" class="form-control">
+			        <option selected>Selecione...</option>
+			        <option>ENERGISA MINAS GERAIS - DISTRIBUIDORA DE ENERGIA S.A.</option>
+			        <option>COMPANHIA ENERGÉTICA DO MARANHÃO</option>
+			        <option>AMAZONAS DISTRIBUIDORA DE ENERGIA S.A</option>
+			        <option>ESPÍRITO SANTO CENTRAIS ELÉTRICAS S.A.</option>
+			        <option>BANDEIRANTE ENERGIA S.A.</option>
+			        <option>COMPANHIA PAULISTA DE FORÇA E LUZ</option>
+			        <option>CEMIG DISTRIBUIÇÃO S.A</option>
+			        <option>Outro(a)</option>
+			      </select>
+    			</div>
+    		
+
+		    </div> <!-- Fim da coluna da direita -->
+
+		    </div>	
+
+		    <button type="submit" class="btn btn-primary">Confirmar</button>
+		    <button type="reset" class="btn btn-secondary">Limpar</button>
+
+
+		  
+		</form>
+
+
+	</div>
+</div>
+
+</body>
+</html>
