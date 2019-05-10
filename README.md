@@ -58,7 +58,7 @@ A página de gerenciamento nada mais é que uma forma de remover ou editar algum
 
 Essa página tem a função de realizar as simulações, **por exemplo:** qual o consumo diário do usuário se ele utilizar o chuveiro de sua residência por menos tempo do que o habitual...
 
-Todas páginas foram feitas em HTML e CSS e as mesmas estão diponíveis na raiz deste respositório, podem ser acessadas diretamente clicando [aqui](https://github.com/UFOP-CSI477/2019-01-trabalho-final-2019-01-trabalho-final-maycon-marcos)
+Todas páginas foram feitas em HTML e CSS e as mesmas estão diponíveis na raiz deste respositório, podem ser acessadas diretamente clicando [aqui](https://github.com/UFOP-CSI477/2019-01-trabalho-final-2019-01-trabalho-final-maycon-marcos/tree/master/telas-html)
 
 
 ### 5. Referências
