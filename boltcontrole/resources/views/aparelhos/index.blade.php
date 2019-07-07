@@ -5,8 +5,6 @@
 @section('conteudo')
 
 
-  <a class="btn btn-primary" href="{{ route('aparelhos.create') }}">Inserir</a>
-
   <table class="table table-striped mt-2">
     <tr>
       <th>Código</th>
@@ -29,5 +27,9 @@
     </tr>
   @endforeach
   </table>
+
+  <div class="form-inline">
+        <a class="btn btn-primary" href="{{ route('aparelhos.create') }}">Inserir</a>
+    </div>
 
 @endsection

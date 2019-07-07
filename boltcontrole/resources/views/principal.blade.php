@@ -19,7 +19,7 @@
 </head>
 <body>
 
-  <nav class=" navbar fixed-top navbar-expand-sm navbar-dark bg-dark mb-3">
+  <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
     <div class="col-4">
       <a href="index.html" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
