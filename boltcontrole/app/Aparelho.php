@@ -9,4 +9,8 @@ class Aparelho extends Model
     protected $fillable = [
         'comodo_id' , 'nome', 'potencia', 'hora', 'consumo',
     ];
+
+    public function comodo() {
+      return $this->belongsTo('App\Comodo');
+    }
 }

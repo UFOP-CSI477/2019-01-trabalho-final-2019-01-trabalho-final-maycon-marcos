@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Aparelho;
+use App\Comodo;
 use Illuminate\Http\Request;
 
 class AparelhoController extends Controller
@@ -14,7 +15,10 @@ class AparelhoController extends Controller
      */
     public function index()
     {
-        //
+        $aparelhos = Aparelho::orderBy('nome')->get();
+
+        return view('aparelhos.index')
+                ->with('aparelhos', $aparelhos);
     }
 
     /**
@@ -23,8 +27,10 @@ class AparelhoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+        $comodos = Comodo::orderBy('nome')->get();
+        return view('aparelhos.create')
+                ->with('comodos', $comodos);
     }
 
     /**
@@ -35,7 +41,15 @@ class AparelhoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Aparelho::create($request->all());
+
+        // Mensagem de sucesso:
+        // -- Flash
+        // mensagem -> campo
+        session()->flash('mensagem', 'Aparelho inserido com sucesso!');
+
+        //return redirect('/aparelhos');
+        return redirect()->route('aparelhos.index');
     }
 
     /**

@@ -19,18 +19,17 @@
 </head>
 <body>
 
-<nav class=" navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
- <div class="container">
-  <div class="col-4">
-<a href="index.html" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
-</div>
+  <nav class=" navbar fixed-top navbar-expand-sm navbar-dark bg-dark mb-3">
+    <div class="container">
+    <div class="col-4">
+      <a href="index.html" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
+    </div>
 
-<button class="navbar-toggler"type="button"  data-toggle="collapse" data-target="#menuPrincipal" name="button">
+    <button class="navbar-toggler"type="button"  data-toggle="collapse" data-target="#menuPrincipal" name="button">
+      <span class="navbar-toggler-icon"> </span>
+    </button>
 
-<span class="navbar-toggler-icon"> </span>
-</button>
-
-   <div class="collapse navbar-collapse" id="menuPrincipal">
+    <div class="collapse navbar-collapse" id="menuPrincipal">
 
 
       <ul class="navbar-nav ">
@@ -43,8 +42,8 @@
         <li class="nav-item dropdown"> <a  class="nav-link dropdown-toggle"
            href="#" data-toggle="dropdown">Equipamentos</a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="Cadastro_Aparelho.html">Cadastrar</a>
-        <a class="dropdown-item" href="Buscar_Aparelho.html">Gerenciar</a>
+        <a class="dropdown-item" href="{{ route('aparelhos.create') }}">Cadastrar</a>
+        <a class="dropdown-item" href="/aparelhos">Gerenciar</a>
 
       </div>
          </li>
@@ -64,17 +63,17 @@
 
       </ul>
 
-   </div>
-    <form action="#" class="form-inline my-2"  method="post">
-      <input class="form-control mr-2" type="text" name="pesquisa" value="">
-      <input class="btn btn-info my-lg-0" type="submit" name="" value="Pesquisar">
-    </form>
-    </div><!--termino do container -->
+      </div>
+        <form action="#" class="form-inline my-2"  method="post">
+          <input class="form-control mr-2" type="text" name="pesquisa" value="">
+          <input class="btn btn-info my-lg-0" type="submit" name="" value="Pesquisar">
+        </form>
+      </div><!--termino do container -->
     </nav> <!--termino da barra de nevegação -->
 
 
 
-    <div class="container mt-2">
+    <div class="container mt-5">
         @yield('conteudo')
     </div> <!-- fim do container -->
 
