@@ -7,8 +7,6 @@ campoBuscar.addEventListener("input", function(){
 
 
 /*
-
-   senhas de acesso blablabla
 	if( this.value.length >0){
        for (var i = 0; i<Aparelhos.length; i++) {
        var IDTrs = Aparelhos[i];
@@ -20,7 +18,6 @@ campoBuscar.addEventListener("input", function(){
        	IDTrs.classList.add("invisivel");
        }else{
        	IDTrs.classList.remove("invisivel");
-				um novo teste para puxar
        }
 		}
 	}else{
