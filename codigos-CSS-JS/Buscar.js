@@ -5,6 +5,7 @@ campoBuscar.addEventListener("input", function(){
 	console.log(this.value);
 	var Aparelhos = document.querySelectorAll("#IDTrs");
 
+ksjfkjsdhfjksdhk
 
 /*
 
