@@ -6,7 +6,7 @@
 
   <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Aparelhos</h1>
 
-  <table class="table table-bordered table-hover table-striped table-sm">
+  <table class="table table-bordered table-hover table-striped">
     <tr>
       <th>Código</th>
       <th>Comodo</th>
@@ -27,7 +27,7 @@
       <td>{{ $a->consumo }}</td>
       <td><a class="btn btn-outline-primary" href="{{ route('aparelhos.edit', $a->id) }}">Atualizar</a></td>
       <td>
-      <!-- Excluir o procedimento corrente //-->
+      <!-- Excluir o aparelho corrente //-->
       <form method="post" action="{{ route('aparelhos.destroy', $a->id) }}" onsubmit="return confirm('Tem certeza que deseja excluir o Aparelho?');" >
 
         @csrf
