@@ -3,7 +3,7 @@
 @section('titulo', 'Aparelhos')
 
 @section('conteudo')
- <div class="col-8">
+
 
   <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Aparelhos</h1>
 
@@ -42,7 +42,7 @@
   </table>
 
   <br>
-  
+
 
   <div class="form-inline">
         <a class="btn btn-primary" href="{{ route('aparelhos.create') }}">Inserir</a>
