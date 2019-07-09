@@ -44,7 +44,7 @@
   
 
   <div class="form-inline">
-        <a class="btn btn-primary" href="{{ route('aparelhos.create') }}">Inserir</a>
+        <a class="btn btn-primary ml-auto mr-2" href="{{ route('aparelhos.create') }}">Inserir</a>
     </div>
 
 

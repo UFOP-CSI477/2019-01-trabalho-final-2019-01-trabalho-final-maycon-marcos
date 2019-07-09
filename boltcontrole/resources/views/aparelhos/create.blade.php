@@ -38,8 +38,8 @@
     </div>
 
     <div class="form-inline">
-        <a class="btn btn-primary mr-3" href="{{ route('aparelhos.index') }}">Voltar</a>
-        <input class="btn btn-primary" type="submit" name="btnSalvar" value="Incluir">
+        <a class="btn btn-primary mr-3 ml-2" href="{{ route('aparelhos.index') }}">Voltar</a>
+        <input class="btn btn-primary ml-auto mr-2" type="submit" name="btnSalvar" value="Incluir">
     </div>
 
   </form>
