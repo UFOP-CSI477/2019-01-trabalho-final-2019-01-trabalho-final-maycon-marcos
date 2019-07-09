@@ -14,7 +14,10 @@ class ComodoController extends Controller
      */
     public function index()
     {
-        //
+        $Comodo = Comodo::order_by('nome')->get();
+        return view('comodos.index')
+                ->with('comodos', $comodos);
+
     }
 
     /**
@@ -24,7 +27,7 @@ class ComodoController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +38,15 @@ class ComodoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      Comodo::create($request->all());
+
+      // Mensagem de sucesso:
+      // -- Flash
+      // mensagem -> campo
+      session()->flash('mensagem', '');
+
+      //return redirect('/aparelhos');
+      return redirect()->route('comodo.index');
     }
 
     /**
@@ -46,7 +57,8 @@ class ComodoController extends Controller
      */
     public function show(Comodo $comodo)
     {
-        //
+      return view('procedures.show')
+        ->with('procedures', $procedure);
     }
 
     /**
@@ -57,7 +69,8 @@ class ComodoController extends Controller
      */
     public function edit(Comodo $comodo)
     {
-        //
+      return view('comodos.edit')
+              ->with('comodos', $comodo);
     }
 
     /**
@@ -81,5 +94,10 @@ class ComodoController extends Controller
     public function destroy(Comodo $comodo)
     {
         //
+    }
+
+
+    public function inicial(){
+      return view('comodos.telainicial');
     }
 }
