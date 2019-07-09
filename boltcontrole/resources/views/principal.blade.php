@@ -19,6 +19,11 @@
 </head>
 <body>
 
+  <!-- Exibir mensagens -> campo: mensagem //-->
+    @if( Session::has('mensagem') )
+      <p><strong>{{ Session::get('mensagem') }}</strong></p>
+    @endif
+  
   <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
     <div class="col-4">

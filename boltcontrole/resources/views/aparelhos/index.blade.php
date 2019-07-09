@@ -4,6 +4,7 @@
 
 @section('conteudo')
 
+  <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Aparelhos</h1>
 
   <table class="table table-striped mt-2">
     <tr>
@@ -14,6 +15,7 @@
       <th>Tempo de Uso (h/dia)</th>
       <th>Consumo Kw/h</th>
       <th>Editar</th>
+      <th>Delete</th>
     </tr>
   @foreach ($aparelhos as $a)
     <tr>
@@ -23,7 +25,17 @@
       <td>{{ $a->potencia }}</td>
       <td>{{ $a->hora }}</td>
       <td>{{ $a->consumo }}</td>
-      <td><a href="{{ route('aparelhos.edit', $a->id) }}">Exibir</a></td>
+      <td><a class="btn btn-outline-primary" href="{{ route('aparelhos.edit', $a->id) }}">Atualizar</a></td>
+      <td>
+      <!-- Excluir o procedimento corrente //-->
+      <form method="post" action="{{ route('aparelhos.destroy', $a->id) }}" onsubmit="return confirm('Tem certeza que deseja excluir o Aparelho?');" >
+
+        @csrf
+        @method('DELETE')
+
+        <input class="btn btn-outline-danger" type="submit" value="Excluir">
+
+      </form></td>
     </tr>
   @endforeach
   </table>

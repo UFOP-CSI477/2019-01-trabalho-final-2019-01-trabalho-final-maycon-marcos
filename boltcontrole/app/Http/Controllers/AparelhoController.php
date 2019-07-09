@@ -71,7 +71,10 @@ class AparelhoController extends Controller
      */
     public function edit(Aparelho $aparelho)
     {
-        //
+        $comodos = Comodo::orderBy('nome')->get();
+        return view('aparelhos.edit')
+                ->with("aparelho", $aparelho)
+                ->with('comodos', $comodos);
     }
 
     /**
@@ -83,7 +86,14 @@ class AparelhoController extends Controller
      */
     public function update(Request $request, Aparelho $aparelho)
     {
-        //
+        $aparelho->fill($request->all());
+
+        $aparelho->save();
+
+        session()->flash('mensagem', 'Aparelho atualizado com sucesso!');
+
+        return redirect()->route('aparelhos.index');
+
     }
 
     /**
@@ -94,6 +104,9 @@ class AparelhoController extends Controller
      */
     public function destroy(Aparelho $aparelho)
     {
-        //
+        $aparelho->delete();
+        session()->flash('mensagem', 'Aparelho excluído com sucesso!');
+
+        return redirect()->route('aparelhos.index');
     }
 }
