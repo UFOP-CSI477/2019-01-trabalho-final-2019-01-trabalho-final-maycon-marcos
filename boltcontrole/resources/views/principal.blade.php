@@ -31,7 +31,7 @@
   <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
     <div class="col-4">
-      <a href="index.html" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
+      <a href="/" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
     </div>
 
     <button class="navbar-toggler"type="button"  data-toggle="collapse" data-target="#menuPrincipal" name="button">
@@ -44,31 +44,54 @@
       <ul class="navbar-nav ">
 
         <li class="nav-item">
-              <a href="index.html" class="nav-link ">Home</a>
+              <a href="/" class="nav-link ">Home</a>
         </li>
 
-
-        <li class="nav-item dropdown"> <a  class="nav-link dropdown-toggle"
-           href="#" data-toggle="dropdown">Equipamentos</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="{{ route('aparelhos.create') }}">Cadastrar</a>
-        <a class="dropdown-item" href="/aparelhos">Gerenciar</a>
-
-      </div>
-         </li>
-
-         <li class="nav-item">
+        <li class="nav-item">
               <a href="simulacoes.html" class="nav-link ">Simulações</a>
         </li>
 
         <li class="nav-item dropdown"> <a  class="nav-link dropdown-toggle"
-           href="#" data-toggle="dropdown">Perfil</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Editar Perfil</a>
-        <a class="dropdown-item" href="pag-Inicial.html">Sair</a>
-
-      </div>
+           href="#" data-toggle="dropdown">Equipamentos</a>
+          
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{ route('aparelhos.create') }}">Cadastrar</a>
+            <a class="dropdown-item" href="/aparelhos">Gerenciar</a>
+          </div>
+         
          </li>
+
+        <li>
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle"style="color: #FF4000;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+        </li>
 
       </ul>
 
