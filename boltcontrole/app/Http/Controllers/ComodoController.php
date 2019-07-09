@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comodo;
+use App\Aparelho;
 use Illuminate\Http\Request;
 
 class ComodoController extends Controller
@@ -14,9 +15,11 @@ class ComodoController extends Controller
      */
     public function index()
     {
-        $Comodo = Comodo::order_by('nome')->get();
+        $aparelhos = Aparelho::orderBy('nome')->get();
+        $comodos = Comodo::orderBy('nome')->get();
         return view('comodos.index')
-                ->with('comodos', $comodos);
+                ->with('comodos', $comodos)
+                ->with('aparelhos', $aparelhos);
 
     }
 
