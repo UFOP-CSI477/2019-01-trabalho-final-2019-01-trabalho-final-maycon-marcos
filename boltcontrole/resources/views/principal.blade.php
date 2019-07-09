@@ -17,13 +17,17 @@
 	  <!-- ícone do sistema web -->
     <link rel="icon"  href="https://img.icons8.com/color/48/000000/edison-bulb.png">
 </head>
-<body>
+<body   style="font-family: 'Aladin'; background-color: #f3f3f3;
+  font-size: 16px; ">
 
-  <!-- Exibir mensagens -> campo: mensagem //-->
-    @if( Session::has('mensagem') )
-      <p><strong>{{ Session::get('mensagem') }}</strong></p>
-    @endif
-  
+	<!--Exibir mensagens ->campo:mensagem -->
+
+	 @if (Session::has('mensagem'))
+	 <div class="alert alert-success" role="alert">
+				{{ Session::get('mensagem') }}
+	 </div>
+	 @endif
+
   <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
     <div class="col-4">
@@ -101,9 +105,14 @@
 
 
 
-    <div class="container mt-5">
-        @yield('conteudo')
-    </div> <!-- fim do container -->
+		<!-- Conteúdo - parte central //-->
+ <div style=" margin: 20px; padding: 10px; background: #fff;
+border-radius: 15px;">
+
+ @yield('conteudo')
+
+ </div>
+
 
 
     <!-- Optional JavaScript -->
