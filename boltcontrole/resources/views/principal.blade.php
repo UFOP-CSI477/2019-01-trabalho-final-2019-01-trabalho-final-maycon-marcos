@@ -27,7 +27,7 @@
   <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
     <div class="col-4">
-      <a href="index.html" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
+      <a href="/" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
     </div>
 
     <button class="navbar-toggler"type="button"  data-toggle="collapse" data-target="#menuPrincipal" name="button">
@@ -40,17 +40,18 @@
       <ul class="navbar-nav ">
 
         <li class="nav-item">
-              <a href="index.html" class="nav-link ">Home</a>
+              <a href="/" class="nav-link ">Home</a>
         </li>
 
 
         <li class="nav-item dropdown"> <a  class="nav-link dropdown-toggle"
            href="#" data-toggle="dropdown">Equipamentos</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="{{ route('aparelhos.create') }}">Cadastrar</a>
-        <a class="dropdown-item" href="/aparelhos">Gerenciar</a>
-
-      </div>
+          
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{ route('aparelhos.create') }}">Cadastrar</a>
+            <a class="dropdown-item" href="/aparelhos">Gerenciar</a>
+          </div>
+         
          </li>
 
          <li class="nav-item">
