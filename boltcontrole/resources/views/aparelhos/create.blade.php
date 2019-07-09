@@ -4,6 +4,8 @@
 
 @section('conteudo')
 
+ <div class="col-8">
+
     <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Inserir Aparelhos</h1>
 
   <form method="post" action="{{ route('aparelhos.store') }}">
@@ -42,5 +44,5 @@
     </div>
 
   </form>
-
+<div>
 @endsection
