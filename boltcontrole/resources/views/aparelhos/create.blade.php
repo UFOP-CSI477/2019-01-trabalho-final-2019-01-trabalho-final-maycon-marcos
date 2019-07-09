@@ -4,7 +4,6 @@
 
 @section('conteudo')
 
- <div class="col-8">
 
     <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Inserir Aparelhos</h1>
 
@@ -44,5 +43,5 @@
     </div>
 
   </form>
-<div>
+
 @endsection
