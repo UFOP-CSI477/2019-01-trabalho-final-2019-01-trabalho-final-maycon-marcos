@@ -51,9 +51,15 @@
               <a href="simulacoes.html" class="nav-link ">Simulações</a>
         </li>
 
-        <li class="nav-item">
-              <a href="/comodos" class="nav-link ">Comodo</a>
-        </li>
+        <li class="nav-item dropdown"> <a  class="nav-link dropdown-toggle"
+           href="#" data-toggle="dropdown">Cômodos</a>
+          
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{{ route('comodos.create') }}">Cadastrar</a>
+            <a class="dropdown-item" href="/comodos">Gerenciar</a>
+          </div>
+         
+         </li>
 
         <li class="nav-item dropdown"> <a  class="nav-link dropdown-toggle"
            href="#" data-toggle="dropdown">Equipamentos</a>
