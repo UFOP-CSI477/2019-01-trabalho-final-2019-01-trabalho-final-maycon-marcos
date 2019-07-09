@@ -106,7 +106,7 @@
 
 
 		<!-- Conteúdo - parte central //-->
- <div style=" margin: 20px; padding: 10px; background: #fff;
+ <div class='container mt-3' style="padding: 10px; background: #fff;
 border-radius: 15px;">
 
  @yield('conteudo')
