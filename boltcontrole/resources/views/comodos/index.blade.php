@@ -8,7 +8,7 @@
 
 @foreach ($comodos as $c)
 <table class="table table-hover table-striped">
- <thead>
+ <thead class="thead-dark">
    <tr>
      <th>Código</th>
      <th>Nome</th>
@@ -41,7 +41,7 @@
   <tr>
 
     <table class="table table-hover table-striped">
-      <tr>
+      <thead>
         <th>Código</th>
         <th>Comodo</th>
         <th>Nome</th>
@@ -50,7 +50,7 @@
         <th>Consumo Kw/h</th>
         <th>Editar</th>
         <th>Delete</th>
-      </tr>
+      </thead>
       @foreach ($c->aparelhos as $a)
       @if($a->comodo_id == $c->id)
       <tr>
@@ -74,7 +74,7 @@
         </tr>
         <!-- Calcula consumo do cômodo -->
         <tr>
-          <td colspan="8">
+          <td  class="table-borderless" colspan="8">
             Consumo {{ $c->nome }}: {{$c->aparelhos->sum("consumo")}} Kw/h
 
           </td>

@@ -7,7 +7,7 @@
   <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Aparelhos</h1>
 
   <table class="table table-bordered table-hover table-striped">
-    <tr>
+    <thead class="thead-dark">
       <th>Código</th>
       <th>Comodo</th>
       <th>Nome</th>
@@ -16,7 +16,7 @@
       <th>Consumo Kw/h</th>
       <th>Editar</th>
       <th>Delete</th>
-    </tr>
+    </thead>
   @foreach ($aparelhos as $a)
     <tr>
       <td>{{ $a->id }}</td>
