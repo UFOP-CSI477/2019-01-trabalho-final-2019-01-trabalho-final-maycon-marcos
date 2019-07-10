@@ -74,8 +74,8 @@
         </tr>
         <!-- Calcula consumo do cômodo -->
         <tr>
-          <td>
-            {{$c->aparelhos->sum("consumo")}}
+          <td colspan="8">
+            Consumo {{ $c->nome }}: {{$c->aparelhos->sum("consumo")}} Kw/h
 
           </td>
         </tr>
