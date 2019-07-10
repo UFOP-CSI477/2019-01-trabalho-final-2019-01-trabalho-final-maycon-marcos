@@ -72,6 +72,18 @@
 
           </form></td>
         </tr>
+        <!-- Calcula consumo do cômodo -->
+        <tr>
+          <td>
+            @foreach ($aparelhos as $a)
+            @foreach ($comodos as $c)
+                @if ($a->comodo_id == $c->id)
+                     $sum += $a->consumo;
+                @endif
+            @endforeach
+            @endforeach
+          </td>
+        </tr>
         @endif
         @endforeach
       </table>

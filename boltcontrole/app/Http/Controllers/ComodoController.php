@@ -17,6 +17,7 @@ class ComodoController extends Controller
     {
         $aparelhos = Aparelho::orderBy('nome')->get();
         $comodos = Comodo::orderBy('nome')->get();
+    
         return view('comodos.index')
                 ->with('comodos', $comodos)
                 ->with('aparelhos', $aparelhos);
