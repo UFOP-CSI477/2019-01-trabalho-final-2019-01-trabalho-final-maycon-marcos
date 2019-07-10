@@ -31,7 +31,7 @@
   <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
     <div class="col-4">
-      <a href="/" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
+      <a href="/home" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
     </div>
 
     <button class="navbar-toggler"type="button"  data-toggle="collapse" data-target="#menuPrincipal" name="button">
@@ -44,7 +44,7 @@
       <ul class="navbar-nav ">
 
         <li class="nav-item">
-              <a href="/" class="nav-link ">Home</a>
+              <a href="/home" class="nav-link ">Home</a>
         </li>
 
         <li class="nav-item">
@@ -108,7 +108,7 @@
 
 
       </div>
-      
+
       </div><!--termino do container -->
     </nav> <!--termino da barra de nevegação -->
 
