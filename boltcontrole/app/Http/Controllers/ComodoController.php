@@ -15,12 +15,10 @@ class ComodoController extends Controller
      */
     public function index()
     {
-        $aparelhos = Aparelho::orderBy('nome')->get();
-        $comodos = Comodo::orderBy('nome')->get();
-    
-        return view('comodos.index')
-                ->with('comodos', $comodos)
-                ->with('aparelhos', $aparelhos);
+      $comodos = Comodo::orderBy('nome')->get();
+    return view('comodos.index')
+           ->with('comodos', $comodos);
+
 
     }
 
@@ -31,7 +29,7 @@ class ComodoController extends Controller
      */
     public function create()
     {
-
+  return view('comodos.create');
     }
 
     /**
@@ -50,7 +48,7 @@ class ComodoController extends Controller
       session()->flash('mensagem', '');
 
       //return redirect('/aparelhos');
-      return redirect()->route('comodo.index');
+      return redirect()->route('comodos.index');
     }
 
     /**
@@ -61,8 +59,8 @@ class ComodoController extends Controller
      */
     public function show(Comodo $comodo)
     {
-      return view('procedures.show')
-        ->with('procedures', $procedure);
+      return view('comodos.show')
+        ->with('comodo', $comodo);
     }
 
     /**
@@ -74,7 +72,7 @@ class ComodoController extends Controller
     public function edit(Comodo $comodo)
     {
       return view('comodos.edit')
-              ->with('comodos', $comodo);
+              ->with('comodo', $comodo);
     }
 
     /**
@@ -86,7 +84,14 @@ class ComodoController extends Controller
      */
     public function update(Request $request, Comodo $comodo)
     {
-        //
+      $comodo->fill($request->all());
+
+  $comodo->save();
+
+  session()->flash('mensagem', 'Comodo atualizado com sucesso!');
+
+  return redirect()->route('comodos.show', $comodo->id);
+
     }
 
     /**
@@ -104,4 +109,4 @@ class ComodoController extends Controller
     public function inicial(){
       return view('comodos.telainicial');
     }
-}
+  }

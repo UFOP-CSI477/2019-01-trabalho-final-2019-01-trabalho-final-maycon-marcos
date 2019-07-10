@@ -51,7 +51,7 @@
         <th>Editar</th>
         <th>Delete</th>
       </tr>
-      @foreach ($aparelhos as $a)
+      @foreach ($c->aparelhos as $a)
       @if($a->comodo_id == $c->id)
       <tr>
         <td>{{ $a->id }}</td>
@@ -75,13 +75,8 @@
         <!-- Calcula consumo do cômodo -->
         <tr>
           <td>
-            @foreach ($aparelhos as $a)
-            @foreach ($comodos as $c)
-                @if ($a->comodo_id == $c->id)
-                     $sum += $a->consumo;
-                @endif
-            @endforeach
-            @endforeach
+            {{$c->aparelhos->sum("consumo")}}
+
           </td>
         </tr>
         @endif
