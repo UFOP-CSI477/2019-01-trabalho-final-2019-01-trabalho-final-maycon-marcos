@@ -12,7 +12,7 @@
    <tr>
      <th>Código</th>
      <th>Nome</th>
-     <th>Editar</th>
+     <th><img width="30px" height="30px" src="https://img.icons8.com/dusk/64/000000/edit-link.png">Editar</th>
      <th>Delete</th>
    </tr>
 
@@ -48,7 +48,7 @@
         <th>Potência</th>
         <th>Tempo de Uso (h/dia)</th>
         <th>Consumo Kw/h</th>
-        <th>Editar</th>
+        <th><img width="30px" height="30px" src="https://img.icons8.com/dusk/64/000000/edit-link.png">Editar</th>
         <th>Delete</th>
       </thead>
       @foreach ($c->aparelhos as $a)
@@ -81,7 +81,7 @@
         <tr>
           <td  class="table-borderless" colspan="8">
             <p class="font-weight-bold">Consumo {{ $c->nome }}: {{$c->aparelhos->sum("consumo")}} Kw/h
-            </p>
+            </p><br>
           </td>
         </tr>
     @endforeach
