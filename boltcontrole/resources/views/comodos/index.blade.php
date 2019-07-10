@@ -72,17 +72,18 @@
 
           </form></td>
         </tr>
-        <!-- Calcula consumo do cômodo -->
-        <tr>
-          <td  class="table-borderless" colspan="8">
-            Consumo {{ $c->nome }}: {{$c->aparelhos->sum("consumo")}} Kw/h
-
-          </td>
-        </tr>
+        
         @endif
         @endforeach
       </table>
     </tr>
+    <!-- Calcula consumo do cômodo -->
+        <tr>
+          <td  class="table-borderless" colspan="8">
+            <p class="font-weight-bold">Consumo {{ $c->nome }}: {{$c->aparelhos->sum("consumo")}} Kw/h
+            </p>
+          </td>
+        </tr>
     @endforeach
 
    </tbody>
