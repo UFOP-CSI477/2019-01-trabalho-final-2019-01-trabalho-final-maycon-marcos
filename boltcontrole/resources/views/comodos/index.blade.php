@@ -7,7 +7,7 @@
 <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Cômodos</h1>
 
 @foreach ($comodos as $c)
-<table class="table table-bordered table-hover table-striped">
+<table class="table table-hover table-striped">
  <thead>
    <tr>
      <th>Código</th>
@@ -36,11 +36,11 @@
 
    </tr>
    <tr>
-    <td  colspan="4"><h2>Aparelhos do Cômodo</h2></td>
+    <td  colspan="4"><h2>Aparelhos do(a) {{ $c->nome }}</h2></td>
     </tr>
   <tr>
 
-    <table class="table table-bordered table-hover table-striped">
+    <table class="table table-hover table-striped">
       <tr>
         <th>Código</th>
         <th>Comodo</th>
