@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Comodo;
 use App\Aparelho;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ComodoController extends Controller
 {   
@@ -20,7 +21,7 @@ class ComodoController extends Controller
      */
     public function index()
     {
-      $comodos = Comodo::orderBy('nome')->get();
+      $comodos = Comodo::where('user_id', Auth::user()->id)->orderBy('nome')->get();
     return view('comodos.index')
            ->with('comodos', $comodos);
 

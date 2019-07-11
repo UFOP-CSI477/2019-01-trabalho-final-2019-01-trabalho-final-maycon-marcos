@@ -26,6 +26,7 @@ class CreateAparelhosTable extends Migration
             $table->foreign('comodo_id')
                       ->references('id')
                       ->on('comodos');
+                      
             $table->foreign('user_id')
                         ->references('id')
                           ->on('users');          

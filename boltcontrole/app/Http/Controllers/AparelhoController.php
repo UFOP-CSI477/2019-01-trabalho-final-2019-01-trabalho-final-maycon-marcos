@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Aparelho;
 use App\Comodo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AparelhoController extends Controller
 {
@@ -20,8 +21,8 @@ class AparelhoController extends Controller
      */
     public function index()
     {
-        $aparelhos = Aparelho::orderBy('nome')->get();
 
+        $aparelhos = Aparelho::where('user_id', Auth::user()->id)->orderBy('nome')->get();
         return view('aparelhos.index')
                 ->with('aparelhos', $aparelhos);
     }
