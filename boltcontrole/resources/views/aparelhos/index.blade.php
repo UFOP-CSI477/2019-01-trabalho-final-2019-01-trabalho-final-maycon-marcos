@@ -6,7 +6,7 @@
 
   <h1 style="text-align: center;"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Aparelhos</h1>
 
-  <table class="table table-bordered table-hover table-striped">
+  <table class="table table-hover table-striped">
     <thead class="thead-dark">
         <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/cute-clipart/64/000000/charge-battery.png">Nome</th>
         <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/cloudshot.png">Potência (W)</th>

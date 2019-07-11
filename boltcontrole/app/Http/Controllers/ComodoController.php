@@ -99,7 +99,7 @@ class ComodoController extends Controller
 
   session()->flash('mensagem', 'Comodo atualizado com sucesso!');
 
-  return redirect()->route('comodos.show', $comodo->id);
+  return redirect()->route('comodos.index', $comodo->id);
 
     }
 

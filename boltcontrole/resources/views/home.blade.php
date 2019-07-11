@@ -1,7 +1,7 @@
 @extends('principal')
 
 @section('conteudo')
-<div class="container" >
+<div class="container">
       <div class="row">
         <h1 class="col-12" style="text-align: center;">Dashboard</h2>
           <br><br><br>

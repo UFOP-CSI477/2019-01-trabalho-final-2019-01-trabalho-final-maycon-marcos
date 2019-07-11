@@ -33,9 +33,10 @@
       </form></td>
 
    </tr>
-   <tr>
-    <td  colspan="4"><h2>Aparelhos do(a) {{ $c->nome }}</h2></td>
-    </tr>
+   <thead>
+    <td  colspan="4"><h2 style="text-align: center;">Aparelhos do(a) {{ $c->nome }}</h2>
+    </td>
+    </thead>
   <tr>
 
     <table class="table table-hover table-striped">
@@ -73,9 +74,9 @@
     </tr>
     <!-- Calcula consumo do cômodo -->
         <tr>
-          <td  class="table-borderless" colspan="8">
-            <p class="font-weight-bold">Consumo {{ $c->nome }}: {{$c->aparelhos->sum("consumo")}} Kw/h
-            </p><br>
+          <td colspan="8">
+            <h4 class="font-weight-bold" style="text-align: center;" >Consumo do(a) {{ $c->nome }}: {{$c->aparelhos->sum("consumo")}} Kw/h
+            </h4><br>
           </td>
         </tr>
     @endforeach

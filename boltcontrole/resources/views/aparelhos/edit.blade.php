@@ -4,7 +4,6 @@
 
 @section('conteudo')
 
-<div class="col-8">
 
     <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Editar Aparelho</h1>
 
@@ -40,10 +39,10 @@
     </div>
 
     <div class="form-inline">
-        <a class="btn btn-primary mr-3" href="{{ route('aparelhos.index') }}">Voltar</a>
-        <input class="btn btn-primary" type="submit" name="btnSalvar" value="Atualizar">
+        <a class="btn btn-dark mr-3 ml-2" style="color: #FF4000;" href="{{ route('aparelhos.index') }}">Voltar</a>
+        <input class="btn btn-dark mr-2 ml-auto" style="color: #FF4000;" type="submit" name="btnSalvar" value="Confirmar">
     </div>
 
   </form>
-<div>
+
 @endsection
