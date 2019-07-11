@@ -3,7 +3,7 @@
 @section('conteudo')
 <div class="container" >
       <div class="row">
-        <h1 class="col-12">Dashboard</h2>
+        <h1 class="col-12" style="text-align: center;">Dashboard</h2>
           <br><br><br>
    @if(auth::user()->consumudiario == null)
           <h2>Consumo Diário</h2>
@@ -42,10 +42,12 @@
         </div>
 
         <div class="col-6"  style="background-color: #f3f3f3; border-radius: 10px;"> <!-- Exibição do valor do consumo diário-->
-         <h2>valor do consumo diário</h2>
-         <br><br>
-         <h4>Consumo Carregado em nosso sistema:</h4>
-         <h2 id="resultado"> XXXX </h2>
+         <h2 style="text-align: center;">valor do consumo diário</h2>
+         <br>
+         <h4>Consumo total da Residência calculado em nosso sistema:</h4>
+         <h2 id="resultado"> {{ $aparelhos->sum("consumo") }} kw/h </h2>
+         <h4>Consumo total da Residência médio em 24 horas:</h4>
+         <h2 id="resultado"> {{ $aparelhos->sum("consumo")*24 }} kw </h2>
         </div>
 
       </div> <!-- fim da linha -->
@@ -56,8 +58,8 @@
          <div class="col-6"  style="background-color: #f3f3f3; border-radius: 10px;"> <!-- Exibição do valor do consumo diário-->
           <h2>Aqui aparecerá o valor do consumo diário</h2>
           <br><br>
-          <h4>Consumo Carregado em nosso sistema:</h4>
-          <h2>XXXXXXXXXX</h2>
+          <h4>Consumo total da Residência calculado em nosso sistema:</h4>
+          <h2>{{ $aparelhos->sum("consumo") }} kw/h</h2>
          </div>
 
     @endif
