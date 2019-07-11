@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Comodo extends Model
 {
     protected $fillable = [
-        'nome',
+        'nome', 'user_id',
     ];
 
     public function aparelhos() {
