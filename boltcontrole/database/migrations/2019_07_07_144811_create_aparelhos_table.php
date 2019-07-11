@@ -16,6 +16,7 @@ class CreateAparelhosTable extends Migration
         Schema::create('aparelhos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('comodo_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('nome');
             $table->decimal('potencia');
             $table->decimal('hora');
@@ -25,6 +26,11 @@ class CreateAparelhosTable extends Migration
             $table->foreign('comodo_id')
                       ->references('id')
                       ->on('comodos');
+            $table->foreign('user_id')
+                        ->references('id')
+                          ->on('users');          
+
+
         });
     }
 

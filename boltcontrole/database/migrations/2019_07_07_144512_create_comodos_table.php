@@ -15,8 +15,14 @@ class CreateComodosTable extends Migration
     {
         Schema::create('comodos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
             $table->string('nome');
             $table->timestamps();
+
+
+            $table->foreign('user_id')
+                      ->references('id')
+                       ->on('users');
         });
     }
 
