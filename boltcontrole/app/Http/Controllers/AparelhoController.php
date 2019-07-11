@@ -46,7 +46,8 @@ class AparelhoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+
         Aparelho::create($request->all());
 
         // Mensagem de sucesso:
@@ -115,4 +116,5 @@ class AparelhoController extends Controller
 
         return redirect()->route('aparelhos.index');
     }
+
 }

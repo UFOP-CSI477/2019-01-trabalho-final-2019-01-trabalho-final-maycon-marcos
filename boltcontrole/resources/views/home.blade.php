@@ -47,7 +47,7 @@
          <h4>Consumo total da Residência calculado em nosso sistema:</h4>
          <h2 id="resultado"> {{ $aparelhos->sum("consumo") }} kw/h </h2>
          <h4>Consumo total da Residência médio em 24 horas:</h4>
-         <h2 id="resultado"> {{ $aparelhos->sum("consumo")*24 }} kw </h2>
+         <h2 id="resultado"> {{ $aparelhos->sum("consumo") * 24}} kw </h2>
         </div>
 
       </div> <!-- fim da linha -->

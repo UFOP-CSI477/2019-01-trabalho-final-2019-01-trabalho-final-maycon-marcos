@@ -28,13 +28,13 @@
             <p>Nome: <input class="form-control" type="text" name="nome"></p>
         </div>
         <div class="form-group col-md-3">
-            <p>Potência: <input class="form-control" type="text" name="potencia"></p>
+            <p>Potência: <input class="form-control" type="text" name="potencia" id="potencia"></p>
         </div>
         <div class="form-group col-md-2">
-            <p>Hora: <input class="form-control" type="text" name="hora"></p>
+            <p>Hora: <input class="form-control" type="text" name="hora" id="hora"></p>
         </div>
         <div class="form-group col-md-2">
-            <p>Consumo: <input class="form-control" type="text" name="consumo"></p>
+            <p>Consumo: <input class="form-control" type="text" name="consumo" id="hora"></p>
         </div>
 
         <div class="form-group col-md-2">

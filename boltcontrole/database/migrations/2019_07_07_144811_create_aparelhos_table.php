@@ -20,7 +20,7 @@ class CreateAparelhosTable extends Migration
             $table->string('nome');
             $table->decimal('potencia');
             $table->decimal('hora');
-            $table->decimal('consumo');
+            $table->decimal('consumo')->nullable();
             $table->timestamps();
 
             $table->foreign('comodo_id')
