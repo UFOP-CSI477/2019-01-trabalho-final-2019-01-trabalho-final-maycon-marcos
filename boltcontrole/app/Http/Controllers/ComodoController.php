@@ -7,7 +7,12 @@ use App\Aparelho;
 use Illuminate\Http\Request;
 
 class ComodoController extends Controller
-{
+{   
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
