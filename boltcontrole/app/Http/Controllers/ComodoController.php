@@ -54,7 +54,7 @@ class ComodoController extends Controller
       // Mensagem de sucesso:
       // -- Flash
       // mensagem -> campo
-      session()->flash('mensagem', '');
+      session()->flash('mensagem', 'Cômodo inserido com sucesso!');
 
       //return redirect('/aparelhos');
       return redirect()->route('comodos.index');

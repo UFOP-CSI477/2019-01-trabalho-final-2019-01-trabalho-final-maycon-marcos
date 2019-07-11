@@ -16,8 +16,10 @@
             <p>Comodo:
               <select class="form-control" name="comodo_id">
                 @foreach($comodos as $c)
+                    @if($c->user_id == Auth::user()->id)
                     <option value="{{ $c->id }}"
                         > {{ $c->nome }}</option>
+                    @endif
                 @endforeach
                 </select>
             </p>
@@ -36,7 +38,11 @@
         </div>
 
         <div class="form-group col-md-2">
-            <p>Usuário autenticado: <input class="form-control" type="text" value="{{auth::user()->id}}" name="user_id" readonly></p>
+            <p>Usuário autenticado: 
+                <select class="form-control" name="user_id">
+                    <option value="{{auth::user()->id}}"
+                        >{{ auth::user()->name }}</option>
+                </select>
         </div>
 
     </div>
