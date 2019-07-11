@@ -13,6 +13,9 @@ class ComodoController extends Controller
     public function __construct()
     {
        $this->middleware('auth');
+       //exceto tais funções
+       // $this->middleware('auth',
+      //   [ 'except' => [ 'index' ] ]);
     }
     /**
      * Display a listing of the resource.
