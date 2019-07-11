@@ -16,8 +16,10 @@
             <p>Comodo:
               <select class="form-control" name="comodo_id">
                 @foreach($comodos as $c)
+                    @if($c->user_id == Auth::user()->id)
                     <option value="{{ $c->id }}"
                         > {{ $c->nome }}</option>
+                    @endif
                 @endforeach
                 </select>
             </p>
