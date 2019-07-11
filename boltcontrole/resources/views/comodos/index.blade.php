@@ -4,26 +4,24 @@
 
 @section('conteudo')
 
-<h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Cômodos</h1>
+<h1 style="text-align: center;"><img class="mr-1" width="70px" height="70px" src="https://img.icons8.com/dusk/64/000000/home.png">Cômodos</h1>
 
 @foreach ($comodos as $c)
 <table class="table table-hover table-striped">
  <thead class="thead-dark">
    <tr>
-     <th>Código</th>
-     <th>Nome</th>
-     <th><img width="30px" height="30px" src="https://img.icons8.com/dusk/64/000000/edit-link.png">Editar</th>
-     <th>Delete</th>
+     <th><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/home.png">Nome do Cômodo</th>
+     <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/edit.png">Editar</th>
+     <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/toggle-off.png">Delete</th>
    </tr>
 
  </thead>
  <tbody>
 
    <tr>
-     <td>{{ $c->id }}</td>
      <td>{{  $c->nome}}</td>
-     <td><a class="btn btn-outline-primary" href="{{ route('comodos.edit', $c->id) }}">Atualizar</a></td>
-     <td>
+     <td style="text-align: center;"><a class="btn btn-outline-primary" href="{{ route('comodos.edit', $c->id) }}">Atualizar</a></td>
+     <td style="text-align: center;">
       <!-- Excluir o comodo corrente //-->
       <form method="post" action="{{ route('comodos.destroy', $c->id) }}" onsubmit="return confirm('Tem certeza que deseja excluir o Cômodo?');" >
 
@@ -42,26 +40,22 @@
 
     <table class="table table-hover table-striped">
       <thead>
-        <th>Código</th>
-        <th>Comodo</th>
-        <th>Nome</th>
-        <th>Potência</th>
-        <th>Tempo de Uso (h/dia)</th>
-        <th>Consumo Kw/h</th>
-        <th><img width="30px" height="30px" src="https://img.icons8.com/dusk/64/000000/edit-link.png">Editar</th>
-        <th>Delete</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/cute-clipart/64/000000/charge-battery.png">Nome</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/cloudshot.png">Potência (W)</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/cotton/64/000000/time.png">Tempo de Uso (h/dia)</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/plug.png">Consumo (Kw/h)</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/edit.png">Editar</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/toggle-off.png">Delete</th>
       </thead>
       @foreach ($c->aparelhos as $a)
       @if($a->comodo_id == $c->id)
       <tr>
-        <td>{{ $a->id }}</td>
-        <td>{{ $a->comodo->nome }}</td>
-        <td>{{ $a->nome }}</a></td>
-        <td>{{ $a->potencia }}</td>
-        <td>{{ $a->hora }}</td>
-        <td>{{ $a->consumo }}</td>
-        <td><a class="btn btn-outline-primary" href="{{ route('aparelhos.edit', $a->id) }}">Atualizar</a></td>
-        <td>
+        <td style="text-align: center;">{{ $a->nome }}</a></td>
+        <td style="text-align: center;">{{ $a->potencia }}</td>
+        <td style="text-align: center;">{{ $a->hora }}</td>
+        <td style="text-align: center;">{{ $a->consumo }}</td>
+        <td style="text-align: center;"><a class="btn btn-outline-primary" href="{{ route('aparelhos.edit', $a->id) }}">Atualizar</a></td>
+        <td style="text-align: center;">
           <!-- Excluir o procedimento corrente //-->
           <form method="post" action="{{ route('aparelhos.destroy', $a->id) }}" onsubmit="return confirm('Tem certeza que deseja excluir o Aparelho?');" >
 

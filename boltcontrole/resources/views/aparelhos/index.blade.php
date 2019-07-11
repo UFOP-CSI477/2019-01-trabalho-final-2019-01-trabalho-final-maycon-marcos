@@ -4,29 +4,26 @@
 
 @section('conteudo')
 
-  <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Aparelhos</h1>
+  <h1 style="text-align: center;"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Aparelhos</h1>
 
   <table class="table table-bordered table-hover table-striped">
     <thead class="thead-dark">
-      <th>Código</th>
-      <th>Comodo</th>
-      <th>Nome</th>
-      <th>Potência</th>
-      <th>Tempo de Uso (h/dia)</th>
-      <th>Consumo Kw/h</th>
-      <th>Editar</th>
-      <th>Delete</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/cute-clipart/64/000000/charge-battery.png">Nome</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/cloudshot.png">Potência (W)</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/cotton/64/000000/time.png">Tempo de Uso (h/dia)</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/plug.png">Consumo (Kw/h)</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/edit.png">Editar</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/toggle-off.png">Delete</th>
+        <th style="text-align: center;"><img class="mr-1" width="40px" height="40px" src="https://img.icons8.com/dusk/64/000000/home.png">Comodo</th>
     </thead>
   @foreach ($aparelhos as $a)
     <tr>
-      <td>{{ $a->id }}</td>
-      <td>{{ $a->comodo->nome }}</td>
-      <td>{{ $a->nome }}</a></td>
-      <td>{{ $a->potencia }}</td>
-      <td>{{ $a->hora }}</td>
-      <td>{{ $a->consumo }}</td>
-      <td><a class="btn btn-outline-primary" href="{{ route('aparelhos.edit', $a->id) }}">Atualizar</a></td>
-      <td>
+      <td style="text-align: center;">{{ $a->nome }}</a></td>
+      <td style="text-align: center;">{{ $a->potencia }}</td>
+      <td style="text-align: center;">{{ $a->hora }}</td>
+      <td style="text-align: center;">{{ $a->consumo }}</td>
+      <td style="text-align: center;"><a class="btn btn-outline-primary" href="{{ route('aparelhos.edit', $a->id) }}">Atualizar</a></td>
+      <td style="text-align: center;">
       <!-- Excluir o aparelho corrente //-->
       <form method="post" action="{{ route('aparelhos.destroy', $a->id) }}" onsubmit="return confirm('Tem certeza que deseja excluir o Aparelho?');" >
 
@@ -36,15 +33,15 @@
         <input class="btn btn-outline-danger" type="submit" value="Excluir">
 
       </form></td>
+      <td style="text-align: center;">{{ $a->comodo->nome }}</td>
     </tr>
   @endforeach
   </table>
 
   <br>
 
-
   <div class="form-inline">
-        <a class="btn btn-primary ml-auto mr-2" href="{{ route('aparelhos.create') }}">Inserir</a>
+        <a class="btn btn-dark ml-auto mr-2" style="color: #FF4000;" href="{{ route('aparelhos.create') }}">Inserir</a>
     </div>
 
 

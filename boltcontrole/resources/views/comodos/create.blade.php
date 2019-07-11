@@ -15,17 +15,19 @@
         <div class="form-group col-md-3">
             <p>Nome: <input class="form-control" type="text" name="nome"></p>
         </div>
-    </div>
-    <div class="form-group col-md-2">
-        <select class="form-control" name="user_id">
-            <option value="{{auth::user()->id}}"
+        <div class="form-group col-md-2">
+            <p>Usuário autenticado: 
+            <select class="form-control" name="user_id">
+                <option value="{{auth::user()->id}}"
                 >{{ auth::user()->name }}</option>
-        </select>
+            </select>
+            </p>
+        </div>
     </div>
 
     <div class="form-inline">
-        <a class="btn btn-primary mr-3 ml-2" href="{{ route('comodos.index') }}">Voltar</a>
-        <input class="btn btn-primary ml-auto mr-2" type="submit" name="btnSalvar" value="Incluir">
+        <a class="btn btn-dark mr-3 ml-2" style="color: #FF4000;" href="{{ route('comodos.index') }}">Voltar</a>
+        <input class="btn btn-dark ml-auto mr-2" style="color: #FF4000;" type="submit" name="btnSalvar" value="Incluir">
     </div>
 
   </form>

@@ -31,8 +31,6 @@
           </div>
         </div>
 
-
-
         <div>
           <input  type="submit"  value="Calcular"  name="calculo" id="calculo" class="btn btn-dark" style="color: #FF4000;">
 
