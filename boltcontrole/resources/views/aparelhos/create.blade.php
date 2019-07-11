@@ -38,7 +38,11 @@
         </div>
 
         <div class="form-group col-md-2">
-            <p>Usuário autenticado: <input class="form-control" type="text" value="{{auth::user()->id}}" name="user_id" readonly></p>
+            <p>Usuário autenticado: 
+                <select class="form-control" name="user_id">
+                    <option value="{{auth::user()->id}}"
+                        >{{ auth::user()->name }}</option>
+                </select>
         </div>
 
     </div>
