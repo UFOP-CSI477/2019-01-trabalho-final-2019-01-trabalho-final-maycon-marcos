@@ -5,7 +5,7 @@
       <div class="row">
         <h1 class="col-12">Dashboard</h2>
           <br><br><br>
-   @if(auth::user()->consumudiario == null)
+   @if(auth::user()->consumudiario != null)
           <h2>Consumo Diário</h2>
 
        <p>Reserve dois dias normais que possam refletir o mais próximo possível das suas atividades habituais para que possamos calcular  o valor de seu consumo diário de acordo com os valores fornecidos no seu medidor da sua companhia de energia!</p>
