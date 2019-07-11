@@ -1,5 +1,5 @@
 # **CSI477-2019-01 - Proposta de Trabalho Final**
-## *Grupo: Maycon Müller & Marcos Vinícius*
+## *Grupo: Felipe Mendes, Maycon Müller & Marcos Vinícius*
 
 --------------
 
