@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ComodoController extends Controller
-{   
+{
 
     public function __construct()
     {
@@ -111,8 +111,19 @@ class ComodoController extends Controller
      */
     public function destroy(Comodo $comodo)
     {
-        //
-    }
+
+      $aparelho=Aparelho::all();
+        if ($comodo->aparelhos->sum('comodo_id')==0) {
+          $comodo->delete();
+          session()->flash('mensagem', 'Comodo excluído com sucesso!');
+
+          return redirect()->route('comodos.index');
+        }else{
+            session()->flash('mensagem', 'Este comodo não pode ser excluido!');
+          return redirect()->route('comodos.index');
+        }
+      }
+
 
 
     public function inicial(){
