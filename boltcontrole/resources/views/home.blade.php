@@ -34,7 +34,7 @@
 
 
         <div>
-          <input  type="submit"  value="Calcular"  name="calculo" id="calculo" class="btn btn-info">
+          <input  type="submit"  value="Calcular"  name="calculo" id="calculo" class="btn btn-dark" style="color: #FF4000;">
 
             <a href="#" class="btn btn-light">Como ler seu padrão</a>
 
