@@ -16,6 +16,9 @@
             <p>Nome: <input class="form-control" type="text" name="nome"></p>
         </div>
     </div>
+    <div class="form-group col-md-2">
+        <p>Usuário autenticado: <input class="form-control" type="text" value="auth:user()->id" name="user_id" readonly></p>
+    </div>
 
     <div class="form-inline">
         <a class="btn btn-primary mr-3 ml-2" href="{{ route('comodos.index') }}">Voltar</a>
