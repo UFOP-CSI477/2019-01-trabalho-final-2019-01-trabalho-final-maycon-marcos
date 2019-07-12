@@ -8,13 +8,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- fonte usada no sistema -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin"> 
+		<!--
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin"> -->
       <!-- Arquivo CSS externo -->
     <link rel="stylesheet"  href="../codigos-CSS-JS/estilo.css">
 
 
 	  <!-- ícone do sistema web -->
-    <link rel="icon"  href="https://img.icons8.com/color/48/000000/edison-bulb.png">
+   <link rel="icon"  href="https://img.icons8.com/color/48/000000/edison-bulb.png">
 </head>
 <body   style="font-family: 'Aladin'; background-color: #f3f3f3;
   font-size: 16px; ">
@@ -30,7 +31,7 @@
   <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
     <div class="col-4">
-      <a href="/home" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
+      <a href="/" class="navbar-brand"><img src="https://img.icons8.com/color/48/000000/edison-bulb.png"><span style="color: #FF4000;">Bolt</span>Controle</a>
     </div>
 
     <button class="navbar-toggler"type="button"  data-toggle="collapse" data-target="#menuPrincipal" name="button">
