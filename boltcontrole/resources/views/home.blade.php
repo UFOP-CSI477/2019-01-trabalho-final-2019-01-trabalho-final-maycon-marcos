@@ -44,10 +44,10 @@
         <div class="col-6"  style="background-color: #f3f3f3; border-radius: 10px;"> <!-- Exibição do valor do consumo diário-->
          <h2 style="text-align: center;">valor do consumo diário</h2>
          <br>
-         <h4>Consumo total da Residência calculado em nosso sistema:</h4>
-         <h2 id="resultado"> {{ $aparelhos->sum("consumo") }} kw/h </h2>
-         <h4>Consumo total da Residência médio em 24 horas:</h4>
-         <h2 id="resultado"> {{ $aparelhos->sum("consumo") * 24}} kw </h2>
+         <h4>Consumo Médio dos Aparelhos da Residência:</h4>
+         <h2 id="resultado"> {{ $aparelhos->avg("potencia") * $aparelhos->avg("hora") / 1000 }} kW/h </h2>
+         <h4>Consumo Do Mês da Residência médio:</h4>
+         <h2 id="resultado">{{ ($aparelhos->avg("potencia") * $aparelhos->sum("hora") * 30)/1000 }} kWh/mês</h2>
         </div>
 
       </div> <!-- fim da linha -->

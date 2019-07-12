@@ -45,9 +45,6 @@
         <li class="nav-item">
               <a href="/" class="nav-link ">Home</a>
         </li>
-        <li class="nav-item">
-           <a href="simulacoes.html" class="nav-link ">simulações</a>
-        </li>
 
         <li class="nav-item dropdown"> <a  class="nav-link dropdown-toggle"
            href="#" data-toggle="dropdown">Cômodos</a>
