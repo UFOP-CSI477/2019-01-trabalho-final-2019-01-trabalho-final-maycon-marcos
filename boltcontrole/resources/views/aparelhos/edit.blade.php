@@ -5,7 +5,7 @@
 @section('conteudo')
 
 
-    <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Editar Aparelho</h1>
+    <h1 class="mx-auto"><img src="https://img.icons8.com/dusk/64/000000/plug.png">Editar Aparelho</h1>
 
   <form class="form-group" method="post" action="{{ route('aparelhos.update', $aparelho->id) }}">
 

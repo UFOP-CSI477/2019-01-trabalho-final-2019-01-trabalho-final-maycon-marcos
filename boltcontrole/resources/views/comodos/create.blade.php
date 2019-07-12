@@ -2,10 +2,12 @@
 
 @section('titulo', 'Inserir comodo')
 
+
 @section('conteudo')
 
 
-    <h1 class="mx-auto"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Inserir Comodo</h1>
+
+    <h1 class="mx-auto"><img src="https://img.icons8.com/dusk/64/000000/home.png">Inserir Comodo</h1>
 
   <form method="post" action="{{ route('comodos.store') }}">
 
@@ -16,7 +18,7 @@
             <p>Nome: <input class="form-control" type="text" name="nome"></p>
         </div>
         <div class="form-group col-md-2">
-            <p>Usuário autenticado: 
+            <p>Usuário autenticado:
             <select class="form-control" name="user_id">
                 <option value="{{auth::user()->id}}"
                 >{{ auth::user()->name }}</option>

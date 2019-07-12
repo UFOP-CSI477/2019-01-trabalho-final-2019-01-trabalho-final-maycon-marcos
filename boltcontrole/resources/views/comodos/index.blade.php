@@ -34,7 +34,7 @@
 
    </tr>
    <thead>
-    <td  colspan="4"><h2 style="text-align: center;">Aparelhos do(a) {{ $c->nome }}</h2>
+    <td  colspan="4"><h2 style="text-align: center;"><img src="https://img.icons8.com/dusk/64/000000/plug.png">Aparelhos do(a) {{ $c->nome }}</h2>
     </td>
     </thead>
   <tr>

@@ -4,7 +4,7 @@
 
 @section('conteudo')
 
-  <h1 style="text-align: center;"><img src="https://img.icons8.com/color/48/000000/sledgehammer.png">Aparelhos</h1>
+  <h1 style="text-align: center;"><img src="https://img.icons8.com/dusk/64/000000/plug.png">Aparelhos</h1>
 
   <table class="table table-hover table-striped">
     <thead class="thead-dark">
